@@ -394,6 +394,14 @@ fi
   --nm="${NM}" \
   --extra-libs="$(pkg-config --libs --static cpu-features)" \
   --target-os=android \
+  --disable-everything \
+   --enable-decoder=bmp,jpeg2000,jpegls,mjpeg,mjpegb,smvjpeg \
+   --enable-demuxer=bmp,jpeg2000,jpegls,mjpeg,mjpegb,smvjpeg,image2 \
+   --enable-muxer=mp4 \
+   --enable-protocol=file \
+   --enable-encoder=mpeg4 \
+   --enable-filter=scale,null,format \
+
   ${ASM_OPTIONS} \
   --enable-cross-compile \
   --enable-pic \
